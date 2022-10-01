@@ -1,0 +1,49 @@
+#예약 시스템 만들기
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+
+
+class cdhelloworld(toga.App):
+    def startup(self):
+        main_box = toga.Box(style=Pack(direction=COLUMN, alignment='center'))
+
+        time_label = toga.Label("예약할 시간을 선택하세요.", style=Pack(text_align='center',
+                                                            padding_top=30, padding_bottom=10, font_size=10))
+        timeline = toga.Selection(items=['9:00', '10:00', '11:00','12:00'], style=Pack(padding_top=5,
+                                                                    padding_left=50, padding_right=50,
+                                                                    height=30))
+        main_box.add(time_label)
+        main_box.add(timeline)
+
+        name_label = toga.Label("땡땡땡 기구 ~ 시 맞습니까?", style=Pack(text_align='center',
+                                                            padding_top=30, padding_bottom=10, font_size=10))
+        main_box.add(name_label)
+
+
+        # 예 아니오 버튼 설정
+        button1 = toga.Button("예", on_press=self.Reservation, style=Pack(height=40, width=100, padding=5, background_color='#ffffff'))
+        button2 = toga.Button("아니요", on_press=self.Cancel, style=Pack(height=40, width=100, padding=5, background_color='#ffffff'))
+
+        button_box = toga.Box(style=Pack(direction=ROW))
+        button_box.add(button1)
+        button_box.add(button2)
+
+        main_box.add(button_box)
+
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = main_box
+        self.main_window.show()
+
+    # 마지막 예약 확인
+    def Reservation(self, widget):
+        name = '예약이 완료되었습니다.'
+        self.main_window.info_dialog('예약 확인', name)  # dialog title, message, name
+
+    def Cancel(self, widget):
+        name = '예약이 취소되었습니다.'
+        self.main_window.info_dialog('예약 취소', name)
+
+
+def main():
+    return cdhelloworld()
