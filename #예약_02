@@ -1,0 +1,64 @@
+#예약 시스템 만들기
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+
+class cdhelloworld(toga.App):
+
+    def startup(self):
+        main_box = toga.Box(style=Pack(direction=COLUMN, alignment='center'))
+
+        time = ['9:00', '9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','14:00','15:00']
+
+        Reservation_file = open("C:\\Users\\82105\예약현황.txt", 'r', encoding='UTF-8')
+
+# ㅅㅂ 이게 왜 안되는거지?
+        """
+        lst = list()
+        while 1:
+
+            line = Reservation_file.readline()
+            if not line:
+                break
+            else:
+                name = line.split(';')
+                lst.append(name[1]) #시간만 배열에 저장"""
+
+
+
+
+        time_label = toga.Label("예약할 시간을 선택하세요.", style=Pack(text_align='center',padding_top=30, padding_bottom=10, font_size=10))
+
+        #시간선택창
+        timeline = toga.Selection(items=time, style=Pack(padding_top=5, padding_left=50, padding_right=50,height=30))
+        main_box.add(time_label)
+        main_box.add(timeline)
+
+        # 예 아니오 버튼 설정
+        button1 = toga.Button("예", on_press=self.Reservation, style=Pack(height=40, width=100, padding=5, background_color='#ffffff'))
+        button2 = toga.Button("아니요", on_press=self.Cancel, style=Pack(height=40, width=100, padding=5, background_color='#ffffff'))
+
+        button_box = toga.Box(style=Pack(direction=ROW))
+        button_box.add(button1)
+        button_box.add(button2)
+
+        main_box.add(button_box)
+
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = main_box
+        self.main_window.show()
+
+
+
+    def Reservation(self, widget):
+        name = '예약 할 수 없습니다.'
+        self.main_window.info_dialog('예약 실패', name)
+
+
+    def Cancel(self, widget):
+        name = '예약이 취소되었습니다.'
+        self.main_window.info_dialog('예약 취소', name)
+
+
+def main():
+    return cdhelloworld()
