@@ -1,0 +1,35 @@
+"""
+My first application
+"""
+from turtle import st
+from click import style
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+from PIL import Image
+
+# 중앙값: padding(0,0,0,285)
+class jun_HelloWorld(toga.App):
+    def startup(self):
+        main_box = toga.Box(style=Pack(direction=COLUMN))
+        walking_box=toga.Box(style=Pack(direction=ROW))
+        f=open("C:\\Users\\zad34\Desktop\\h_sys\\helloworld\\src\\helloworld\datasample.txt",'r',encoding='UTF-8')
+        my_lst=list()
+        while 1:
+            line=f.readline()
+            if not line:
+                break;
+            else:
+                name=line.split(' ')
+                my_lst.append(name[0])
+        for x in range(len(my_lst)):
+            obj=toga.Button(text=my_lst[x])
+            walking_box.add(obj)
+        main_box.add(walking_box)
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = main_box
+        self.main_window.show()
+
+
+def jun_main():
+    return jun_HelloWorld()
