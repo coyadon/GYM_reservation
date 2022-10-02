@@ -1,6 +1,3 @@
-"""
-My first application
-"""
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
@@ -9,7 +6,7 @@ from toga.style.pack import COLUMN, ROW
 class HelloWorld(toga.App):
     def startup(self):
 
-        main_box = toga.Box(style=Pack(direction=COLUMN, alignment='center'))
+        intro_box = toga.Box(style=Pack(direction=COLUMN, alignment='center'))
 
         # Title
         title_label1 = toga.Label('연세대학교 미래캠퍼스',
@@ -51,15 +48,17 @@ class HelloWorld(toga.App):
         login_box.add(button_box)
         login_box.style.update(direction=COLUMN, alignment='center', flex=5)
 
+        # NULL_Box
+        NULL_box = toga.Box()
+        NULL_box.style.update(flex=7)
+
         # Main_Box
-        main_box.add(title_box)
-        middle_box = toga.Box()
-        middle_box.style.update(flex=7)
-        main_box.add(middle_box)
-        main_box.add(login_box)
+        intro_box.add(title_box)
+        intro_box.add(NULL_box)
+        intro_box.add(login_box)
 
         self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = main_box
+        self.main_window.content = intro_box
         self.main_window.show()
 
 
