@@ -1,0 +1,70 @@
+"""
+My first application
+"""
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+
+
+class HelloWorld(toga.App):
+    def startup(self):
+
+        main_box = toga.Box(style=Pack(direction=COLUMN, alignment='center'))
+
+        # Title
+        title_label1 = toga.Label('연세대학교 미래캠퍼스',
+                                  style=Pack(text_align='center', font_size=30, font_weight='bold', color="#003777"))
+        title_label2 = toga.Label('헬스장 예약 시스템',
+                                  style=Pack(text_align='center', font_size=30, font_weight='bold', color="#003777"))
+
+        image_box = toga.Box()
+        logo_view = toga.ImageView(id="view", image="logo.png")
+        image_box.add(logo_view)
+        image_box.style.update(direction=COLUMN, alignment="center")
+
+        title_box = toga.Box()
+        title_box.add(image_box)
+        title_box.add(title_label1)
+        title_box.add(title_label2)
+        title_box.style.update(direction=COLUMN, flex=2)
+
+        # Login
+        self.ID_input = toga.TextInput(style=(Pack(height=20, width=300)))
+        ID_box = toga.Box()
+        ID_box.add(self.ID_input)
+        ID_box.style.update(direction=ROW, height=10, width=300, padding=5, flex=1)
+
+        self.PW_input = toga.TextInput(style=(Pack(height=20, width=300)))
+        PW_box = toga.Box()
+        PW_box.add(self.PW_input)
+        PW_box.style.update(direction=ROW, height=10, width=300, padding=5)
+
+        button = toga.Button("LOGIN", on_press=self.login)
+        button.style.update()
+        button_box = toga.Box()
+        button_box.add(button)
+        button_box.style.update(direction=COLUMN, height=20, width=300, padding=5)
+
+        login_box = toga.Box()
+        login_box.add(ID_box)
+        login_box.add(PW_box)
+        login_box.add(button_box)
+        login_box.style.update(direction=COLUMN, alignment='center', flex=5)
+
+        # Main_Box
+        main_box.add(title_box)
+        middle_box = toga.Box()
+        middle_box.style.update(flex=7)
+        main_box.add(middle_box)
+        main_box.add(login_box)
+
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = main_box
+        self.main_window.show()
+
+
+    def login(self, widget):
+        print("로그인 성공")
+
+def main():
+    return HelloWorld()
