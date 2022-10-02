@@ -26,29 +26,46 @@ class cdhelloworld(toga.App):
         self.second_window = toga.Window(title='Second window')
     def startup(self):
         global tmpname
+        def setname(self):
+            tmpname=run_butt_obj[0].text
         main_box = toga.Box(style=Pack(direction=COLUMN))
         walking_box = toga.Box(style=Pack(direction=ROW))
+        cycle_box = toga.Box(style=Pack(direction=ROW))
         f = open("C:\\Users\\문승재\datasample.txt", 'r', encoding='UTF-8')
-        my_lst = list()
-        def setname(self):
-            tmpname=obj.text
-            print(tmpname)
+        run_lst = list()
+        run_butt_obj = list()
+        cyc_lst = list()
+        cyc_butt_obj = list()
         while 1:
             line = f.readline()
             if not line:
                 break
             else:
-                name = line.split(' ')
-                my_lst.append(name[0])
-        for x in range(len(my_lst)):
-            obj = toga.Button(text=my_lst[x], on_press=setname)
-            walking_box.add(obj)
-        main_box.add(walking_box)
-        f.close()
+                if "run" in line:
+                    run_lst.append(line)
+                    run_butt_obj.append(0)
+                elif "cyc" in line:
+                    cyc_lst.append(line)
+                    cyc_butt_obj.append(0)
+        for x in range(len(run_butt_obj)):
+            run_butt_obj[x] = toga.Button(text=run_lst[x], style=Pack(padding=(10)), on_press= setname)
 
+            walking_box.add(run_butt_obj[x])
+
+        for x in range(len(cyc_butt_obj)):
+            cyc_butt_obj[x] = toga.Button(text=cyc_lst[x], style=Pack(padding=(30, 20, 0, 20)))
+            cycle_box.add(cyc_butt_obj[x])
+        cycle_run_button = toga.Button("싸이클 런", style=Pack(padding=(30, 20, 0, 100)))
+        cycle_box.add(cycle_run_button)
+        print(type(cycle_box))
+        main_box.add(walking_box)
+        main_box.add(cycle_box)
         self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = main_box
         self.main_window.show()
+        def setname(self):
+            tmpname=run_butt_obj
+            print(tmpname)
     # 마지막 예약 확인
     def Reservation(self, widget):
         name = '예약이 완료되었습니다.'
