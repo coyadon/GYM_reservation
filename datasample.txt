@@ -1,10 +1,17 @@
-run 12:00
-leg 12:30
-run 13:00
-bench 14:30
-run 15:00
-leg 16:30
-run 17:00
-bench 18:30
-
-//요걸로 난 연습중
+run_1
+run_2
+run_3
+run_4
+run_5
+run_6
+run_7
+run_8
+run_9
+run_10
+cyc_1
+cyc_2
+cyc_3
+cyc_4
+cyc_5
+cyc_6
+cyc_7
