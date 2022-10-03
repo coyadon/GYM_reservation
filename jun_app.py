@@ -1,11 +1,13 @@
 """
 My first application
 """
+from gettext import textdomain
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
-
+run_butt_obj = list()
+cyc_butt_obj = list()
 # 중앙값: padding(0,0,0,285)
 class jun_HelloWorld(toga.App):
     def startup(self):
@@ -20,9 +22,9 @@ class jun_HelloWorld(toga.App):
         )
 
         run_lst = list()
-        run_butt_obj = list()
+
         cyc_lst = list()
-        cyc_butt_obj = list()
+
         while 1:
             line = f.readline()
             if not line:
@@ -37,7 +39,7 @@ class jun_HelloWorld(toga.App):
             run_butt_obj.append(
                 toga.Button(
                     text=run_lst[x],
-                    on_press=self.show_second_window(x),
+                    on_press=self.show_second_window,
                     style=Pack(padding=(10)),
                 )
             )
@@ -60,10 +62,16 @@ class jun_HelloWorld(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
         f.close()
+        print(run_butt_obj[0])
 
-    def show_second_window(self, widget, x):
-
-        pass
+    def show_second_window(self, widget):
+        w = widget
+        i = 0
+        for x in run_butt_obj:
+            if x == w:
+                break
+            i += 1
+        print(f"{i+1}번째 런닝머신입니다.")
 
 
 def jun_main():
