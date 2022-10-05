@@ -1,23 +1,9 @@
-import sys
-import os.path
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-class HelloWorld(toga.App):
-    def startup(self):
-
-        path = os.path.dirname(os.path.abspath(__file__))
-        path = os.path.join(path, "IDPW.txt")
-
-        f = open(path, 'r', encoding='UTF-8')
-
-        line = f.readline()
-        print(line)
-
-        intro_box = toga.Box(style=Pack(direction=COLUMN, alignment='center', background_color="white"))
+class login:
+    def __init__(self, button_func):
 
         # Title
         header_box = toga.Box()
@@ -42,8 +28,11 @@ class HelloWorld(toga.App):
         title_box.add(title_label2)
         title_box.style.update(direction=COLUMN, alignment="center", flex=2)
 
-
         # Login
+        self.fail = toga.Label("", style=Pack(text_align='center', font_size=20, color="RED"))
+        fail_box = toga.Box()
+        fail_box.add(self.fail)
+
         self.ID_input = toga.TextInput(style=(Pack(height=25, width=300)))
         ID_box = toga.Box()
         ID_box.add(self.ID_input)
@@ -54,13 +43,14 @@ class HelloWorld(toga.App):
         PW_box.add(self.PW_input)
         PW_box.style.update(direction=ROW, height=10, width=300, padding=5)
 
-        button = toga.Button("LOGIN", on_press=self.login)
+        button = toga.Button("LOGIN", on_press=button_func)
         button.style.update()
         button_box = toga.Box()
         button_box.add(button)
         button_box.style.update(direction=COLUMN, height=25, width=300, padding=5)
 
         login_box = toga.Box()
+        login_box.add(fail_box)
         login_box.add(ID_box)
         login_box.add(PW_box)
         login_box.add(button_box)
@@ -71,19 +61,21 @@ class HelloWorld(toga.App):
         NULL_box.style.update(flex=2)
 
         # Main_Box
-        intro_box.add(title_box)
-        intro_box.add(NULL_box)
-        intro_box.add(login_box)
+        self.intro_box = toga.Box(style=Pack(direction=COLUMN, alignment='center', background_color="white"))
+        self.intro_box.add(title_box)
+        self.intro_box.add(login_box)
 
-        self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = intro_box
-        self.main_window.show()
+    def getIntroBox(self):
+        return self.intro_box
 
-        f.close()
+    def login_fail(self):
+        self.fail.text = "로그인 실패, 정보를 다시 확인하세요."
+        self.fail.refresh()
 
+    def login_sucs(self):
+        self.fail.text = "로그인 성공"
+        self.fail.refresh()
 
-    def login(self, widget):
-        print("로그인 성공")
-
-def main():
-    return HelloWorld()
+    def debug(self, log):
+        self.fail.text = log
+        self.fail.refresh()
