@@ -29,10 +29,11 @@ Y-Health - 어플 사용 방법
    
 
 #### 1. LOGIN :
-   i. ID와 PW를 입력한다.
+   1. ID와 PW를 입력한다.
+   2. 로그인 버튼을 누른다.
 
 #### 2. 헬스장 지도 :
-   * 실제 헬스장 구조를 시각화 해 기구 사용을 용이하게 합니다.
+   1. 실제 헬스장 구조를 시각화 해 기구 사용을 용이하게 한다.
    * 
    * ㅁㄴㅇ
    
@@ -45,16 +46,16 @@ Y-Health - 어플 사용 방법
    * ㅁㄴㅇ
 
 #### 4. TRAFFIC
-   i. traffic을 확인하고자 하는 기구를 선택한다.
-   ii. 시각화된 traffic 그래프를 확인한다.
+   1. traffic을 확인하고자 하는 기구를 선택한다.
+   2. 시각화된 traffic 그래프를 확인한다.
    
 #### 5. 예약 :   
-   i. 기구를 이용하고자 하는 시간을 선택한다.
-   ii. 예약 완료 버튼을 누른다.
-   iii. 예약 완료 창이 뜬다.
+   1. 기구를 이용하고자 하는 시간을 선택한다.
+   2. 예약 완료 버튼을 누른다.
+   3. 예약 완료 창이 뜬다.
 
 
-어플 개발시 어려웠던 점
+프로젝트 진행시 어려웠던 점
 ----------------------
 * toga 거지같아!
 * 시바시바시바
@@ -62,7 +63,7 @@ Y-Health - 어플 사용 방법
 
 Contribute 방법
 ----------------------
-Contribute 방법은 본 Project의 [Github WIKI](https://github.com/coyadon/GYM_reservation) 를 참고해주세요.
+Contribute 방법은 본 Project의 [Github WIKI](https://github.com/coyadon/GYM_reservation)를 참고해주세요.
 
 Contributors
 ----------------------
