@@ -51,7 +51,7 @@ Y-Health : 어플 사용법
 
 Contribute 방법
 ----------------------
-Contribute 방법은 본 Project의 [Github WIKI](https://github.com/coyadon/GYM_reservation)를 참고해주세요.
+Contribute 방법은 본 Project의 [Github WIKI](https://github.com/coyadon/GYM_reservation/wiki)를 참고해주세요.
 
 Contributors
 ----------------------
