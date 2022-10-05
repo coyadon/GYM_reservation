@@ -5,6 +5,7 @@ from gettext import textdomain
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
+from pathlib import Path
 
 run_butt_obj = list()
 cyc_butt_obj = list()
@@ -12,11 +13,17 @@ cyc_butt_obj = list()
 class jun_HelloWorld(toga.App):
     def startup(self):
 
+        self.resources_folder = Path(__file__).joinpath("../resources").resolve()
+        self.db_filepath = self.resources_folder.joinpath("datasample.txt")
+
         main_box = toga.Box(style=Pack(direction=COLUMN))
+     
+
+
         walking_box = toga.Box(style=Pack(direction=ROW))
         cycle_box = toga.Box(style=Pack(direction=ROW))
         f = open(
-            "C:\\Users\\zad34\\Desktop\\응애\\helloworld\\src\\helloworld\\datasample.txt",
+            self.db_filepath,
             "r",
             encoding="UTF-8",
         )
@@ -48,21 +55,22 @@ class jun_HelloWorld(toga.App):
 
         for x in range(len(cyc_lst)):
             cyc_butt_obj.append(
-                toga.Button(text=cyc_lst[x], style=Pack(padding=(30, 20, 0, 20)))
+                toga.Button(text=cyc_lst[x], style=Pack(padding=(30, 0, 0, 20)))
             )
 
             cycle_box.add(cyc_butt_obj[x])
 
-        cycle_run_button = toga.Button("싸이클 런", style=Pack(padding=(30, 20, 0, 100)))
+        cycle_run_button = toga.Button("싸이클 런", style=Pack(padding=(30, 10, 0, 100)))
 
         cycle_box.add(cycle_run_button)
         main_box.add(walking_box)
         main_box.add(cycle_box)
+
         self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = main_box
         self.main_window.show()
-        f.close()
-        print(run_butt_obj[0])
+        #f.close()
+        #print(run_butt_obj[0])
 
     def show_second_window(self, widget):
         w = widget
@@ -71,7 +79,6 @@ class jun_HelloWorld(toga.App):
             if x == w:
                 break
             i += 1
-        print(f"{i+1}번째 런닝머신입니다.")
 
 
 def jun_main():
