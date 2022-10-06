@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.10
+Name: reserve
+Formal-Name: Hello World
+App-ID: com.example.reserve
+Version: 0.0.1
+Home-page: https://example.com/reserve
+Author: Jane Developer
+Author-email: jane@example.com
+Summary: My first application

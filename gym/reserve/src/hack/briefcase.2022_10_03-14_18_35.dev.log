@@ -1,0 +1,119 @@
+Date/Time:       2022-10-03 14:18:35 
+Command line:    C:\anaconda3\envs\pyth\Scripts\briefcase dev
+
+OS Release:      Windows 10
+OS Version:      10.0.22000
+Architecture:    AMD64
+Platform:        Windows-10-10.0.22000-SP0
+
+Python exe:      C:\anaconda3\envs\pyth\python.exe
+Python version:  3.8.13 (default, Mar 28 2022, 06:59:08) [MSC v.1916 64 bit (AMD64)]
+Virtual env:     False
+Conda env:       True
+
+Briefcase:       0.3.10
+Target platform: windows
+Target format:   None
+
+Environment Variables:
+    ALLUSERSPROFILE=C:\ProgramData
+    APPDATA=C:\Users\문승재\AppData\Roaming
+    COMMONPROGRAMFILES=C:\Program Files\Common Files
+    COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+    COMMONPROGRAMW6432=C:\Program Files\Common Files
+    COMPUTERNAME=JAE
+    COMSPEC=C:\WINDOWS\system32\cmd.exe
+    CONDA_DEFAULT_ENV=pyth
+    CONDA_PREFIX=C:\anaconda3\envs\pyth
+    CONDA_PROMPT_MODIFIER=(pyth) 
+    CONDA_SHLVL=1
+    DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+    HOMEDRIVE=C:
+    HOMEPATH=\Users\문승재
+    IDEA_INITIAL_DIRECTORY=C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin
+    JAVA_HOME=C:\Program Files\Java\jdk-11.0.12
+    LOCALAPPDATA=C:\Users\문승재\AppData\Local
+    LOGONSERVER=\\JAE
+    NUMBER_OF_PROCESSORS=12
+    ONEDRIVE=C:\Users\문승재\OneDrive
+    ONEDRIVECONSUMER=C:\Users\문승재\OneDrive
+    OS=Windows_NT
+    PATH=C:\anaconda3\envs\pyth;C:\anaconda3\envs\pyth\Library\mingw-w64\bin;C:\anaconda3\envs\pyth\Library\usr\bin;C:\anaconda3\envs\pyth\Library\bin;C:\anaconda3\envs\pyth\Scripts;C:\anaconda3\envs\pyth\bin;C:\anaconda3\condabin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\臾몄듅??Desktop\jdk-16.0.2_windows-x64_bin\jdk-16.0.2\bin;.;\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\anaconda3;C:\anaconda3\Library\mingw-w64\bin;C:\anaconda3\Library\usr\bin;C:\anaconda3\Library\bin;C:\anaconda3\Scripts;C:\Users\臾몄듅??AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;.;C:\Users\臾몄듅??AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11.0.12\bin;.
+    PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+    PROCESSOR_ARCHITECTURE=AMD64
+    PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+    PROCESSOR_LEVEL=6
+    PROCESSOR_REVISION=a502
+    PROGRAMDATA=C:\ProgramData
+    PROGRAMFILES=C:\Program Files
+    PROGRAMFILES(X86)=C:\Program Files (x86)
+    PROGRAMW6432=C:\Program Files
+    PROMPT=(pyth) $P$G
+    PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+    PUBLIC=C:\Users\Public
+    PYCHARM COMMUNITY EDITION=C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;
+    SESSIONNAME=Console
+    SYSTEMDRIVE=C:
+    SYSTEMROOT=C:\WINDOWS
+    TEMP=C:\Users\문승재\AppData\Local\Temp
+    TERMINAL_EMULATOR=JetBrains-JediTerm
+    TMP=C:\Users\문승재\AppData\Local\Temp
+    USERDOMAIN=JAE
+    USERDOMAIN_ROAMINGPROFILE=JAE
+    USERNAME=문승재
+    USERPROFILE=C:\Users\문승재
+    WINDIR=C:\WINDOWS
+    __INTELLIJ_COMMAND_HISTFILE__=C:\Users\문승재\AppData\Roaming\JetBrains\PyCharmCE2020.3\terminal\history\history-
+
+Briefcase Log:
+[14:18:35]                                                                                                                                                            __main__.py:26
+           Briefcase configuration error: Configuration file not found. Did you run briefcase in the directory that contains 'pyproject.toml'?                        __main__.py:27
+
+┌─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────┐
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\commands\base.py:592 in parse_config                                                                                          │
+│                                                                                                                                                                                  │
+│   589 │                                                                                       ┌────────────────────────────────── locals ───────────────────────────────────┐    │
+│   590 │   def parse_config(self, filename):                                                   │ filename = 'pyproject.toml'                                                 │    │
+│   591 │   │   try:                                                                            │     self = <briefcase.commands.dev.DevCommand object at 0x0000025561057760> │    │
+│ > 592 │   │   │   with open(filename, "rb") as config_file:                                   └─────────────────────────────────────────────────────────────────────────────┘    │
+│   593 │   │   │   │   # Parse the content of the pyproject.toml file, extracting                                                                                                 │
+│   594 │   │   │   │   # any platform and output format configuration for each app,                                                                                               │
+│   595 │   │   │   │   # creating a single set of configuration options.                                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+FileNotFoundError: [Errno 2] No such file or directory: 'pyproject.toml'
+
+The above exception was the direct cause of the following exception:
+
+┌─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────┐
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\__main__.py:19 in main                                                                                                        │
+│                                                                                                                                                                                  │
+│   16 │   │   command = Command(logger=logger, console=console)                                                                                                                   │
+│   17 │   │   options = command.parse_options(extra=extra_cmdline)                                                                                                                │
+│   18 │   │   command.check_obsolete_data_dir()                                                                                                                                   │
+│ > 19 │   │   command.parse_config("pyproject.toml")                                                                                                                              │
+│   20 │   │   command(**options)                                                                                                                                                  │
+│   21 │   except HelpText as e:                                                                                                                                                   │
+│   22 │   │   logger.info()                                                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ┌─────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────┐                                 │
+│ │       command = <briefcase.commands.dev.DevCommand object at 0x0000025561057760>                                                             │                                 │
+│ │       Command = <class 'briefcase.commands.dev.DevCommand'>                                                                                  │                                 │
+│ │       console = <briefcase.console.Console object at 0x00000255613322B0>                                                                     │                                 │
+│ │             e = BriefcaseConfigError("Configuration file not found. Did you run briefcase in the directory that contains 'pyproject.toml'?") │                                 │
+│ │ extra_cmdline = []                                                                                                                           │                                 │
+│ │        logger = <briefcase.console.Log object at 0x0000025561343D60>                                                                         │                                 │
+│ │       options = {'appname': None, 'update_dependencies': False, 'run_app': True}                                                             │                                 │
+│ │        result = 100                                                                                                                          │                                 │
+│ └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘                                 │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\commands\base.py:618 in parse_config                                                                                          │
+│                                                                                                                                                                                  │
+│   615 │   │   │   │   │   )                                                                   ┌────────────────────────────────── locals ───────────────────────────────────┐    │
+│   616 │   │                                                                                   │ filename = 'pyproject.toml'                                                 │    │
+│   617 │   │   except FileNotFoundError as e:                                                  │     self = <briefcase.commands.dev.DevCommand object at 0x0000025561057760> │    │
+│ > 618 │   │   │   raise BriefcaseConfigError(                                                 └─────────────────────────────────────────────────────────────────────────────┘    │
+│   619 │   │   │   │   f"""Configuration file not found. Did you run briefcase in the director                                                                                    │
+│   620 │   │   │   ) from e                                                                                                                                                       │
+│   621                                                                                                                                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+BriefcaseConfigError: Briefcase configuration error: Configuration file not found. Did you run briefcase in the directory that contains 'pyproject.toml'?

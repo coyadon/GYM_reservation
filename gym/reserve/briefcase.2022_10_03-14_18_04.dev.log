@@ -1,0 +1,210 @@
+Date/Time:       2022-10-03 14:18:04 
+Command line:    C:\anaconda3\envs\pyth\Scripts\briefcase dev
+
+OS Release:      Windows 10
+OS Version:      10.0.22000
+Architecture:    AMD64
+Platform:        Windows-10-10.0.22000-SP0
+
+Python exe:      C:\anaconda3\envs\pyth\python.exe
+Python version:  3.8.13 (default, Mar 28 2022, 06:59:08) [MSC v.1916 64 bit (AMD64)]
+Virtual env:     False
+Conda env:       True
+
+Briefcase:       0.3.10
+Target platform: windows
+Target format:   None
+
+Environment Variables:
+    ALLUSERSPROFILE=C:\ProgramData
+    APPDATA=C:\Users\문승재\AppData\Roaming
+    COMMONPROGRAMFILES=C:\Program Files\Common Files
+    COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+    COMMONPROGRAMW6432=C:\Program Files\Common Files
+    COMPUTERNAME=JAE
+    COMSPEC=C:\WINDOWS\system32\cmd.exe
+    CONDA_DEFAULT_ENV=pyth
+    CONDA_PREFIX=C:\anaconda3\envs\pyth
+    CONDA_PROMPT_MODIFIER=(pyth) 
+    CONDA_SHLVL=1
+    DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+    HOMEDRIVE=C:
+    HOMEPATH=\Users\문승재
+    IDEA_INITIAL_DIRECTORY=C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin
+    JAVA_HOME=C:\Program Files\Java\jdk-11.0.12
+    LOCALAPPDATA=C:\Users\문승재\AppData\Local
+    LOGONSERVER=\\JAE
+    NUMBER_OF_PROCESSORS=12
+    ONEDRIVE=C:\Users\문승재\OneDrive
+    ONEDRIVECONSUMER=C:\Users\문승재\OneDrive
+    OS=Windows_NT
+    PATH=C:\anaconda3\envs\pyth;C:\anaconda3\envs\pyth\Library\mingw-w64\bin;C:\anaconda3\envs\pyth\Library\usr\bin;C:\anaconda3\envs\pyth\Library\bin;C:\anaconda3\envs\pyth\Scripts;C:\anaconda3\envs\pyth\bin;C:\anaconda3\condabin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\臾몄듅??Desktop\jdk-16.0.2_windows-x64_bin\jdk-16.0.2\bin;.;\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\anaconda3;C:\anaconda3\Library\mingw-w64\bin;C:\anaconda3\Library\usr\bin;C:\anaconda3\Library\bin;C:\anaconda3\Scripts;C:\Users\臾몄듅??AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;.;C:\Users\臾몄듅??AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11.0.12\bin;.
+    PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+    PROCESSOR_ARCHITECTURE=AMD64
+    PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+    PROCESSOR_LEVEL=6
+    PROCESSOR_REVISION=a502
+    PROGRAMDATA=C:\ProgramData
+    PROGRAMFILES=C:\Program Files
+    PROGRAMFILES(X86)=C:\Program Files (x86)
+    PROGRAMW6432=C:\Program Files
+    PROMPT=(pyth) $P$G
+    PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+    PUBLIC=C:\Users\Public
+    PYCHARM COMMUNITY EDITION=C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;
+    SESSIONNAME=Console
+    SYSTEMDRIVE=C:
+    SYSTEMROOT=C:\WINDOWS
+    TEMP=C:\Users\문승재\AppData\Local\Temp
+    TERMINAL_EMULATOR=JetBrains-JediTerm
+    TMP=C:\Users\문승재\AppData\Local\Temp
+    USERDOMAIN=JAE
+    USERDOMAIN_ROAMINGPROFILE=JAE
+    USERNAME=문승재
+    USERPROFILE=C:\Users\문승재
+    WINDIR=C:\WINDOWS
+    __INTELLIJ_COMMAND_HISTFILE__=C:\Users\문승재\AppData\Roaming\JetBrains\PyCharmCE2020.3\terminal\history\history-
+
+Briefcase Log:
+[14:18:04]                                                                                                                                                                dev.py:164
+           [reserve] Starting in dev mode...                                                                                                                              dev.py:164
+                                                                                                                                                                   subprocess.py:516
+           >>> Running Command:                                                                                                                                    subprocess.py:517
+           >>>     'C:\anaconda3\envs\pyth\python.exe' -c 'import runpy, sys;sys.path.pop(0);runpy.run_module("reserve", run_name="__main__", alter_sys=True)'     subprocess.py:518
+           >>> Working Directory:                                                                                                                                  subprocess.py:525
+           >>>     C:\Users\문승재                                                                                                                                 subprocess.py:526
+           >>> Environment Overrides:                                                                                                                              subprocess.py:535
+           >>>     PYTHONPATH=C:\gym\reserve\src                                                                                                                   subprocess.py:537
+           Traceback (most recent call last):                                                                                                                      subprocess.py:495
+             File "<string>", line 1, in <module>                                                                                                                  subprocess.py:495
+             File "C:\anaconda3\envs\pyth\lib\runpy.py", line 203, in run_module                                                                                   subprocess.py:495
+               mod_name, mod_spec, code = _get_module_details(mod_name)                                                                                            subprocess.py:495
+             File "C:\anaconda3\envs\pyth\lib\runpy.py", line 138, in _get_module_details                                                                          subprocess.py:495
+               raise error("No module named %s" % mod_name)                                                                                                        subprocess.py:495
+           ImportError: No module named reserve                                                                                                                    subprocess.py:495
+           >>> Return code: 1                                                                                                                                      subprocess.py:553
+                                                                                                                                                                      __main__.py:26
+           Unable to start application 'reserve'                                                                                                                      __main__.py:27
+
+┌─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────┐
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\commands\dev.py:89 in run_dev_app                                                                                             │
+│                                                                                                                                                                                  │
+│    86 │   │   """                                                                             ┌────────────────────────────────── locals ──────────────────────────────────┐     │
+│    87 │   │   try:                                                                            │     app = <com.example.reserve v0.0.1 AppConfig>                           │     │
+│    88 │   │   │   # Invoke the app.                                                           │     env = {'PYTHONPATH': 'C:\\gym\\reserve\\src'}                          │     │
+│ >  89 │   │   │   self.tools.subprocess.run(                                                  │ options = {}                                                               │     │
+│    90 │   │   │   │   [                                                                       │    self = <briefcase.commands.dev.DevCommand object at 0x0000020E3D527760> │     │
+│    91 │   │   │   │   │   sys.executable,                                                     └────────────────────────────────────────────────────────────────────────────┘     │
+│    92 │   │   │   │   │   "-c",                                                                                                                                                  │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\integrations\subprocess.py:110 in inner                                                                                       │
+│                                                                                                                                                                                  │
+│   107 │   │   """                                                                                                                                                                │
+│   108 │   │   # Just run the command if no dynamic elements are active                                                                                                           │
+│   109 │   │   if not sub.tools.input.is_console_controlled:                                                                                                                      │
+│ > 110 │   │   │   return sub_method(sub, args, **kwargs)                                                                                                                         │
+│   111 │   │                                                                                                                                                                      │
+│   112 │   │   remove_dynamic_elements = False                                                                                                                                    │
+│   113                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ┌────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────┐                          │
+│ │       args = ['C:\\anaconda3\\envs\\pyth\\python.exe', '-c', 'import runpy, sys;sys.path.pop(0);runpy.run_module("reserve", run_name="__main__'+18] │                          │
+│ │     kwargs = {'env': {'PYTHONPATH': 'C:\\gym\\reserve\\src'}, 'check': True, 'cwd': WindowsPath('C:/Users/문승재'), 'stream_output': True}          │                          │
+│ │        sub = <briefcase.integrations.subprocess.Subprocess object at 0x0000020E3DC6B9D0>                                                            │                          │
+│ │ sub_method = <function Subprocess.run at 0x0000020E4056B280>                                                                                        │                          │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘                          │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\integrations\subprocess.py:284 in run                                                                                         │
+│                                                                                                                                                                                  │
+│   281 │   │   if stream_output or (                                                                                                                                              │
+│   282 │   │   │   self.tools.input.is_console_controlled and not is_output_redirected                                                                                            │
+│   283 │   │   ):                                                                                                                                                                 │
+│ > 284 │   │   │   return self._run_and_stream_output(args, **kwargs)                                                                                                             │
+│   285 │   │                                                                                                                                                                      │
+│   286 │   │   # Otherwise, invoke run() normally.                                                                                                                                │
+│   287 │   │   self._log_command(args)                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ┌─────────────────────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────────────────────┐                │
+│ │                 args = ['C:\\anaconda3\\envs\\pyth\\python.exe', '-c', 'import runpy, sys;sys.path.pop(0);runpy.run_module("reserve", run_name="__main__'+18] │                │
+│ │ is_output_redirected = None                                                                                                                                   │                │
+│ │               kwargs = {'env': {'PYTHONPATH': 'C:\\gym\\reserve\\src'}, 'check': True, 'cwd': WindowsPath('C:/Users/문승재')}                                 │                │
+│ │                 self = <briefcase.integrations.subprocess.Subprocess object at 0x0000020E3DC6B9D0>                                                            │                │
+│ │        stream_output = True                                                                                                                                   │                │
+│ └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘                │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\integrations\subprocess.py:350 in _run_and_stream_output                                                                      │
+│                                                                                                                                                                                  │
+│   347 │   │   self._log_return_code(return_code)                                                                                                                                 │
+│   348 │   │                                                                                                                                                                      │
+│   349 │   │   if check and return_code:                                                                                                                                          │
+│ > 350 │   │   │   raise subprocess.CalledProcessError(return_code, args, stderr=stderr)                                                                                          │
+│   351 │   │                                                                                                                                                                      │
+│   352 │   │   return subprocess.CompletedProcess(args, return_code, stderr=stderr)                                                                                               │
+│   353                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ┌─────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────┐                         │
+│ │        args = ['C:\\anaconda3\\envs\\pyth\\python.exe', '-c', 'import runpy, sys;sys.path.pop(0);runpy.run_module("reserve", run_name="__main__'+18] │                         │
+│ │       check = True                                                                                                                                   │                         │
+│ │      kwargs = {'env': {'PYTHONPATH': 'C:\\gym\\reserve\\src'}, 'cwd': WindowsPath('C:/Users/문승재'), 'stdout': -1, 'stderr': -2, 'bufsize': 1}      │                         │
+│ │     process = <subprocess.Popen object at 0x0000020E406CB4C0>                                                                                        │                         │
+│ │ return_code = 1                                                                                                                                      │                         │
+│ │        self = <briefcase.integrations.subprocess.Subprocess object at 0x0000020E3DC6B9D0>                                                            │                         │
+│ │      stderr = None                                                                                                                                   │                         │
+│ └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+CalledProcessError: Command '['C:\\anaconda3\\envs\\pyth\\python.exe', '-c', 'import runpy, sys;sys.path.pop(0);runpy.run_module("reserve", run_name="__main__", alter_sys=True)']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+┌─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────┐
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\__main__.py:20 in main                                                                                                        │
+│                                                                                                                                                                                  │
+│   17 │   │   options = command.parse_options(extra=extra_cmdline)                                                                                                                │
+│   18 │   │   command.check_obsolete_data_dir()                                                                                                                                   │
+│   19 │   │   command.parse_config("pyproject.toml")                                                                                                                              │
+│ > 20 │   │   command(**options)                                                                                                                                                  │
+│   21 │   except HelpText as e:                                                                                                                                                   │
+│   22 │   │   logger.info()                                                                                                                                                       │
+│   23 │   │   logger.info(str(e))                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ┌───────────────────────────────────── locals ─────────────────────────────────────┐                                                                                             │
+│ │       command = <briefcase.commands.dev.DevCommand object at 0x0000020E3D527760> │                                                                                             │
+│ │       Command = <class 'briefcase.commands.dev.DevCommand'>                      │                                                                                             │
+│ │       console = <briefcase.console.Console object at 0x0000020E3D7022B0>         │                                                                                             │
+│ │             e = BriefcaseCommandError("Unable to start application 'reserve'")   │                                                                                             │
+│ │ extra_cmdline = []                                                               │                                                                                             │
+│ │        logger = <briefcase.console.Log object at 0x0000020E3D713D60>             │                                                                                             │
+│ │       options = {'appname': None, 'update_dependencies': False, 'run_app': True} │                                                                                             │
+│ │        result = 200                                                              │                                                                                             │
+│ └──────────────────────────────────────────────────────────────────────────────────┘                                                                                             │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\commands\dev.py:166 in __call__                                                                                               │
+│                                                                                                                                                                                  │
+│   163 │   │   if run_app:                                                                                                                                                        │
+│   164 │   │   │   self.logger.info("Starting in dev mode...", prefix=app.app_name)                                                                                               │
+│   165 │   │   │   env = self.get_environment(app)                                                                                                                                │
+│ > 166 │   │   │   return self.run_dev_app(app, env, **options)                                                                                                                   │
+│   167                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ┌──────────────────────────────────────── locals ────────────────────────────────────────┐                                                                                       │
+│ │                 app = <com.example.reserve v0.0.1 AppConfig>                           │                                                                                       │
+│ │             appname = None                                                             │                                                                                       │
+│ │      dist_info_path = WindowsPath('C:/gym/reserve/src/reserve.dist-info')              │                                                                                       │
+│ │                 env = {'PYTHONPATH': 'C:\\gym\\reserve\\src'}                          │                                                                                       │
+│ │             options = {}                                                               │                                                                                       │
+│ │             run_app = True                                                             │                                                                                       │
+│ │                self = <briefcase.commands.dev.DevCommand object at 0x0000020E3D527760> │                                                                                       │
+│ │ update_dependencies = False                                                            │                                                                                       │
+│ └────────────────────────────────────────────────────────────────────────────────────────┘                                                                                       │
+│                                                                                                                                                                                  │
+│ C:\anaconda3\envs\pyth\lib\site-packages\briefcase\commands\dev.py:105 in run_dev_app                                                                                            │
+│                                                                                                                                                                                  │
+│   102 │   │   │   │   stream_output=True,                                                     ┌────────────────────────────────── locals ──────────────────────────────────┐     │
+│   103 │   │   │   )                                                                           │     app = <com.example.reserve v0.0.1 AppConfig>                           │     │
+│   104 │   │   except subprocess.CalledProcessError as e:                                      │     env = {'PYTHONPATH': 'C:\\gym\\reserve\\src'}                          │     │
+│ > 105 │   │   │   raise BriefcaseCommandError(                                                │ options = {}                                                               │     │
+│   106 │   │   │   │   f"Unable to start application '{app.app_name}'"                         │    self = <briefcase.commands.dev.DevCommand object at 0x0000020E3D527760> │     │
+│   107 │   │   │   ) from e                                                                    └────────────────────────────────────────────────────────────────────────────┘     │
+│   108                                                                                                                                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+BriefcaseCommandError: Unable to start application 'reserve'
